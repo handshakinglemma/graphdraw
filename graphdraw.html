@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <canvas id="myCanvas" width="600" height="600", style="border:2px solid black;" onclick="draw_circle(event)">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+    <script>
+
+      function draw_circle(event) {
+
+      var center = get_click_position(event)
+
+      <!-- http://www.w3schools.com/tags/canvas_arc.asp -->
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(center[0], center[1], 10, 0, 2*Math.PI);
+      ctx.fill();
+      }
+
+      function get_click_position(event) {
+
+      var x = event.clientX;
+      var y = event.clientY;
+
+      return [x, y]
+
+      }
+
+    </script>
+
+  </body>
+</html>
