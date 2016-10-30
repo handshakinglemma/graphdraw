@@ -1,9 +1,8 @@
 function draw_circle(event) {
 
-    var center = get_click_position(event)
+    var center = get_click_position(event);
 
-    // http://www.w3schools.com/tags/canvas_arc.asp
-
+    // http://www.w3schools.com/tags/canvas_arc.asp on Oct 28/16
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     ctx.beginPath();
@@ -18,6 +17,6 @@ function get_click_position(event) {
     var x = event.clientX;
     var y = event.clientY;
 
-    return [x, y]
+    return [x, y];
 
 }
